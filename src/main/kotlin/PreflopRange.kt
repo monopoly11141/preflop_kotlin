@@ -1,3 +1,5 @@
+import Log.GameLog
+
 class PreflopRange {
     private val rfiRanges = doubleArrayOf(.40, .53, .62, 1.0, .85)
     private val handStrength = HandStrength()

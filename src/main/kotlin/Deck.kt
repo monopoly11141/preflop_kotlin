@@ -1,3 +1,5 @@
+import utils.CardUtils
+
 class Deck() {
     val cardDeck : MutableList<Card> = mutableListOf()
 
@@ -9,11 +11,8 @@ class Deck() {
     private fun newDeck() {
         cardDeck.clear()
 
-        val values = charArrayOf('2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A')
-        val suits = charArrayOf('c', 'd', 'h', 's')
-
-        for(value in values) {
-            for(suit in suits) {
+        for(value in CardUtils.values) {
+            for(suit in CardUtils.suits) {
                 cardDeck.add(Card("${value}${suit}"))
             }
         }

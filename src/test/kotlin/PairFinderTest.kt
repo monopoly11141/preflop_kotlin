@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.TestInstance
+import utils.CardUtils
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class PairFinderTest {
@@ -23,11 +24,8 @@ class PairFinderTest {
 
     @BeforeAll
     fun beforeAll() {
-        val values = listOf("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
-        val suits = listOf("s", "d", "h", "c")
-
-        for(value in values) {
-            for(suit in suits) {
+        for(value in CardUtils.values) {
+            for(suit in CardUtils.suits) {
                 cardMap["$value$suit"] = Card("$value$suit")
             }
         }

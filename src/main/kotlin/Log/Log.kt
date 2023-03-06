@@ -1,3 +1,5 @@
+package Log
+
 data class Log(
     var pos : Int = 0,
     var actionTaken : String = "",
