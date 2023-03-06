@@ -13,7 +13,7 @@ class PairFinder {
             cardListArrayList.add(CardList())
         }
         doCalculation()
-        returnHandRanking()
+        initHandRankingString()
     }
 
     private fun doCalculation() {
@@ -113,7 +113,7 @@ class PairFinder {
         }
     }
 
-    fun returnHandRanking(): String {
+    fun initHandRankingString(): String {
         handRankingString = if (cardPairArray[3] == 1) {
             "quads"
         } else if (cardPairArray[2] >= 1) {

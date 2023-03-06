@@ -21,7 +21,6 @@ class Deck() {
     }
 
     fun shuffleCardDeck() {
-        val log = GameLog()
         cardDeck.shuffle()
     }
 
